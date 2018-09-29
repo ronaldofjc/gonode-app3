@@ -1,0 +1,49 @@
+{
+  "name": "n03-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test nyc mocha __tests__/**/*.test.js --exit",
+    "start": "nodemon -e js, json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "handlebars": "^4.0.11",
+    "html-to-text": "^4.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.7",
+    "nodemailer": "^4.6.8",
+    "raven": "^2.6.3",
+    "require-dir": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.13.0",
+    "factory-girl": "^5.0.2",
+    "faker": "^4.1.0",
+    "mocha": "^5.2.0",
+    "node-mocks-http": "^1.7.0",
+    "nodemon": "^1.18.3",
+    "nyc": "^13.0.1",
+    "sinon": "^6.3.4"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary",
+      "html"
+    ],
+    "report-dir": "./__tests__/coverage"
+  }
+}
