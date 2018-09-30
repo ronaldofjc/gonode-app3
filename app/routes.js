@@ -7,7 +7,9 @@ const authMiddleware = require('./middlewares/auth');
 
 const controllers = requireDir('./controllers');
 
-routes.get('/', 'Ok');
+routes.get('/', (req, res) => {
+    res.render('Ok');
+  });
 
 // Auth
 routes.post('/signin', controllers.authController.signin);
